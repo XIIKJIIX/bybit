@@ -81,14 +81,20 @@ type V5WebsocketPrivateWalletCoin struct {
 	UsdValue            string `json:"usdValue"`
 	WalletBalance       string `json:"walletBalance"`
 	AvailableToWithdraw string `json:"availableToWithdraw"`
-	AvailableToBorrow   string `json:"availableToBorrow"`
-	BorrowAmount        string `json:"borrowAmount"`
-	AccruedInterest     string `json:"accruedInterest"`
-	TotalOrderIM        string `json:"totalOrderIM"`
-	TotalPositionIM     string `json:"totalPositionIM"`
-	TotalPositionMM     string `json:"totalPositionMM"`
-	UnrealisedPnl       string `json:"unrealisedPnl"`
-	CumRealisedPnl      string `json:"cumRealisedPnl"`
+	// Deprecated: This field is deprecated. Please refer to availableToBorrow in the Get Collateral Info endpoint
+	AvailableToBorrow string `json:"availableToBorrow"`
+	BorrowAmount      string `json:"borrowAmount"`
+	AccruedInterest   string `json:"accruedInterest"`
+	TotalOrderIM      string `json:"totalOrderIM"`
+	TotalPositionIM   string `json:"totalPositionIM"`
+	TotalPositionMM   string `json:"totalPositionMM"`
+	UnrealisedPnl     string `json:"unrealisedPnl"`
+	CumRealisedPnl    string `json:"cumRealisedPnl"`
+	Bonus             string `json:"bonus"`
+	CollateralSwitch  bool   `json:"collateralSwitch"`
+	MarginCollateral  bool   `json:"marginCollateral"`
+	Locked            string `json:"locked"`
+	SpotHedgingQty    string `json:"spotHedgingQty"`
 }
 
 // Key :
